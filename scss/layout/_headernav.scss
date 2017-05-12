@@ -1,0 +1,35 @@
+.main-header,
+.main-nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-header {
+	padding-top: 2em;
+}
+
+.name {
+	align-self: center;
+}
+
+.main-nav {
+	margin-top: 1.5em;
+}
+
+.main-nav a {
+	display: block;
+	color: #444;
+	font-size: 1.125em;
+	font-weight: 700;
+	text-align: center;
+	padding:  .7em;
+	background-color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin: .3em .7em;
+}
+
+.main-nav a:hover {
+	color: orange;
+	border-bottom: 1px dotted orange;
+}
