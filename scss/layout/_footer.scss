@@ -1,0 +1,30 @@
+footer {
+	width: 80%;
+	border-top: 1px solid #ddd;
+	margin: 2px auto 2em;
+	font-weight: bold;
+	color: #444;
+	padding-bottom: 1.5em;
+	padding-top: 0.5em;
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer ul li:first-child {
+	float: left;
+}
+
+footer ul li {
+	list-style: none;
+	margin: 10px;
+	float: right;
+}
+
+footer li a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #444;
+	float: right;
+}
