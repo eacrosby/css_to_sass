@@ -1,3 +1,135 @@
+/**************************
+BASE STYLES
+**************************/
+* {
+  box-sizing: border-box; }
 
+body {
+  font-family: 'Catamaran', sans-serif;
+  color: #878787;
+  text-align: center;
+  background-color: #fafafa; }
+
+ul {
+  padding-left: 0; }
+
+p {
+  margin: 0 14px 20px;
+  font-size: 1.1em;
+  font-weight: 200; }
+
+.caption {
+  margin-bottom: 50px; }
+
+.contactinfo {
+  background-color: orange;
+  color: white; }
+
+.contactinfo h2 {
+  color: white; }
+
+.contactdata {
+  font-weight: bold;
+  padding-left: .7em; }
+
+.top-link {
+  float: right;
+  font-size: .9em; }
+
+footer {
+  width: 80%;
+  border-top: 1px solid #ddd;
+  margin: 2px auto 2em;
+  font-weight: bold;
+  color: #444;
+  padding-bottom: 1.5em;
+  padding-top: 0.5em; }
+
+footer ul {
+  list-style: none; }
+
+footer ul li:first-child {
+  float: left; }
+
+footer ul li {
+  list-style: none;
+  margin: 10px;
+  float: right; }
+
+footer li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #444;
+  float: right; }
+
+.foot-nav {
+  display: none; }
+
+.main-header {
+  padding-top: 2em; }
+
+.name {
+  align-self: center; }
+
+.main-nav {
+  margin-top: 1.5em; }
+
+.main-nav a {
+  display: block;
+  color: #444;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-align: center;
+  padding: .7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: .3em .7em; }
+
+.main-nav a:hover {
+  color: orange;
+  border-bottom: 1px dotted orange; }
+
+.portfolio, .projects, .main-nav a {
+  background-color: white; }
+
+.projects, .skills, .contactinfo {
+  padding-bottom: 1em; }
+
+.main-header, .main-nav {
+  display: flex;
+  flex-direction: column; }
+
+img {
+  max-width: 90%; }
+
+.profile img {
+  width: 75%;
+  margin-bottom: .7em; }
+
+@font-face {
+  font-family: 'Audiowide', cursive;
+  font-family: 'Catamaran', sans-serif; }
+h1 {
+  font-family: 'Audiowide', sans-serif;
+  color: #444;
+  margin: 12px 0; }
+
+h2 {
+  font-family: 'Catamaran', sans-serif;
+  text-transform: uppercase;
+  padding: 30px;
+  margin: 0 auto;
+  font-size: 1em;
+  color: #444; }
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: .5em; }
+
+h4 {
+  float: left;
+  margin-top: -0.1em; }
 
 /*# sourceMappingURL=application.css.map */

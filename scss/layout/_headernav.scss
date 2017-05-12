@@ -1,10 +1,5 @@
-.main-header,
-.main-nav {
-	display: flex;
-	flex-direction: column;
-}
-
 .main-header {
+    @extend %flex;
 	padding-top: 2em;
 }
 
@@ -13,17 +8,18 @@
 }
 
 .main-nav {
+    @extend %flex;
 	margin-top: 1.5em;
 }
 
 .main-nav a {
+    @extend %whiteback;
 	display: block;
 	color: #444;
 	font-size: 1.125em;
 	font-weight: 700;
 	text-align: center;
 	padding:  .7em;
-	background-color: white;
 	text-transform: uppercase;
 	text-decoration: none;
 	margin: .3em .7em;

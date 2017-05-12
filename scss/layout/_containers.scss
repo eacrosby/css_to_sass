@@ -1,10 +1,10 @@
 .portfolio {
-	background-color: white;
+	@extend %whiteback;
 }
 
 .projects {
-	background-color: white;
-	padding-bottom: 1em;
+    @extend %whiteback;
+	@extend %pad-bottom;
 }
 
 .caption {
@@ -12,11 +12,11 @@
 }
 
 .skills {
-	padding-bottom: 1em;
+	@extend %pad-bottom;
 }
 
 .contactinfo {
-	padding-bottom: 1em;
+	@extend %pad-bottom;
 	background-color: orange;
 	color: white;
 }
