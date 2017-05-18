@@ -1,3 +1,5 @@
+@import 'utilities/variables';
+
 /**************************
 BASE STYLES
 **************************/
@@ -8,9 +10,9 @@ BASE STYLES
 
 body {
   font-family: 'Catamaran', sans-serif;
-  color: #878787;
+  color: $text-color;
   text-align: center;
-  background-color: #fafafa;
+  background-color: $background-color;
 }
 
 ul {
@@ -21,4 +23,8 @@ p {
   margin: 0 14px 20px;
   font-size: 1.1em;
   font-weight: 200;
+}
+
+li {
+   list-style: none;
 }

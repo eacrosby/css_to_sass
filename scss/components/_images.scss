@@ -5,4 +5,14 @@ img {
 .profile img {
 	width: 75%;
 	margin-bottom: .7em;
+    @media (min-width: 768px) {
+        float: right;
+		width: 40%;
+		padding-left: 1em;
+    }
+    @media (min-width: 1024px) {
+        width: 45%;
+		padding: 2em;
+		padding-top: 0;
+    }
 }

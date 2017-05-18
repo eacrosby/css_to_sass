@@ -1,14 +1,50 @@
 .portfolio {
 	@extend %whiteback;
+    @extend %clearfix;
+    @media (min-width: 768px) {
+        h2 {
+            background-color: white;
+        }
+    }
+    @media (min-width: 1024px) {
+        width: 95%;
+        margin: auto;
+        ul {
+            margin: auto;
+        }
+    }
 }
 
 .projects {
     @extend %whiteback;
 	@extend %pad-bottom;
+    @media (min-width: 768px) {
+        margin-top: 0;
+        padding-top: 0;
+        ul {
+            text-decoration: none;
+        }
+        
+        li {
+            width: 50%;
+            float: left;
+            padding-left: 0;
+        }
+    }
+    @media (min-width: 1024px) {
+        li {
+            width: 33.3333%;
+		    margin: auto;
+        }
+    }
 }
 
 .caption {
 	margin-bottom: 50px;
+    @media (min-width: 768px) {
+        width: 75%;
+        margin: 0 auto 3em;
+    }
 }
 
 .skills {
@@ -19,10 +55,23 @@
 	@extend %pad-bottom;
 	background-color: orange;
 	color: white;
-}
-
-.contactinfo h2 {
-	color: white;
+    h2 {
+	   color: white;
+    }
+    @media (min-width: 768px) {
+        p {
+        font-size: 1.4em;
+		text-align: center;
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+        }
+    }
+    @media (min-width: 1024px) {
+        p {
+            padding-left: 19%;
+            padding-right: 19%;
+        }
+    }
 }
 
 .contactdata {
@@ -33,4 +82,41 @@
 .top-link {
 	float: right;
 	font-size: .9em;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.profile {
+    @extend %clearfix;
+    @media (min-width: 768px) {
+        width: 95%;
+		margin: 0 auto;
+        p {
+        text-align: left;
+		font-size: 1.2em;
+		line-height: 1.5em;
+        }
+    }
+    @media (min-width: 1024px) {
+        p {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.foot-name {
+    @media (min-width: 768px) {
+        display: flex;
+		flex-direction: column;
+		margin-right: auto; 
+    }
+}
+
+%clearfix {
+    &::after {
+	    content: "";
+	    display: table;
+	    clear: both;
+  }
 }
