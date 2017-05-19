@@ -194,7 +194,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  border-top: 1px solid #ddd;
   margin-top: 2px;
   margin-bottom: 2em;
   font-weight: bold;
@@ -270,7 +269,7 @@ footer {
         padding-bottom: 1em; } }
     .main-nav a:hover {
       color: #ed9a1e;
-      border-bottom: 1px dotted #ffa500; }
+      border-bottom: 1px dotted #ed9a1e; }
   @media (min-width: 1024px) {
     .main-nav li {
       margin-left: -1em;
