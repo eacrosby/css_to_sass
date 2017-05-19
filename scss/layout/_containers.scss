@@ -1,16 +1,11 @@
 .portfolio {
 	@extend %whiteback;
     @extend %clearfix;
-    @media (min-width: 768px) {
-        h2 {
-            background-color: white;
-        }
-    }
-    @media (min-width: 1024px) {
+    @include push--auto;
+    @media (min-width: $break-desktop) {
         width: 95%;
-        margin: auto;
         ul {
-            margin: auto;
+            @include push--auto;
         }
     }
 }
@@ -18,7 +13,8 @@
 .projects {
     @extend %whiteback;
 	@extend %pad-bottom;
-    @media (min-width: 768px) {
+    @extend %clearfix;
+    @media (min-width: $break-tablet) {
         margin-top: 0;
         padding-top: 0;
         ul {
@@ -31,17 +27,17 @@
             padding-left: 0;
         }
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $break-desktop) {
         li {
+            @include push--auto;
             width: 33.3333%;
-		    margin: auto;
         }
     }
 }
 
 .caption {
 	margin-bottom: 50px;
-    @media (min-width: 768px) {
+    @media (min-width: $break-tablet) {
         width: 75%;
         margin: 0 auto 3em;
     }
@@ -53,23 +49,24 @@
 
 .contactinfo {
 	@extend %pad-bottom;
-	background-color: orange;
-	color: white;
+	background-color: $orange;
+	color: $white;
     h2 {
-	   color: white;
+	   color: $white;
     }
-    @media (min-width: 768px) {
+    p {
+        @extend %centertext;
+    }
+    @media (min-width: $break-tablet) {
         p {
-        font-size: 1.4em;
-		text-align: center;
-		padding-left: 12.5%;
-		padding-right: 12.5%;
+            color: $white;
+            font-size: 1.4em;
+            @include side-padding(12.5%);
         }
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $break-desktop) {
         p {
-            padding-left: 19%;
-            padding-right: 19%;
+            @include side-padding(19%);
         }
     }
 }
@@ -82,23 +79,23 @@
 .top-link {
 	float: right;
 	font-size: .9em;
-    @media (min-width: 768px) {
+    @media (min-width: $break-tablet) {
         display: none;
     }
 }
 
 .profile {
     @extend %clearfix;
-    @media (min-width: 768px) {
+    @media (min-width: $break-tablet) {
+        @include push--auto;
         width: 95%;
-		margin: 0 auto;
         p {
-        text-align: left;
-		font-size: 1.2em;
-		line-height: 1.5em;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.5em;
         }
     }
-    @media (min-width: 1024px) {
+    @media (min-width: $break-desktop) {
         p {
             font-size: 1.5em;
         }
@@ -106,17 +103,9 @@
 }
 
 .foot-name {
-    @media (min-width: 768px) {
+    @media (min-width: $break-tablet) {
         display: flex;
 		flex-direction: column;
 		margin-right: auto; 
     }
-}
-
-%clearfix {
-    &::after {
-	    content: "";
-	    display: table;
-	    clear: both;
-  }
 }

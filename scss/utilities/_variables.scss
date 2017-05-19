@@ -1,2 +1,23 @@
+/*  
+Create variables for repeating values.
+    At minimum, create variables for:
+        ALL color values
+        ALL media query breakpoints.
+    Make sure you use your color variable in your project to replace ALL instances of that color property values.
+    Nest your media queries in their respective rules and use your breakpoints variables to define ALL the breakpoint widths.
+*/
+
+
 $background-color: #fafafa;
 $text-color: #878787;
+$dark-text-color: #444;
+$orange: #ed9a1e;
+$white: #fffdf9;
+
+$btnborder: 1px dotted transparent;
+$btnborderorange: 1px dotted #ffa500;
+
+$khula: 'Khula', sans-serif;
+
+$break-tablet: 768px;
+$break-desktop: 1024px;

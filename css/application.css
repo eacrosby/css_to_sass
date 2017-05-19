@@ -1,3 +1,38 @@
+/*  
+Create variables for repeating values.
+    At minimum, create variables for:
+        ALL color values
+        ALL media query breakpoints.
+    Make sure you use your color variable in your project to replace ALL instances of that color property values.
+    Nest your media queries in their respective rules and use your breakpoints variables to define ALL the breakpoint widths.
+*/
+.portfolio, .projects, .main-nav a {
+  background-color: white; }
+
+.projects, .skills, .contactinfo {
+  padding-bottom: 1em; }
+
+.main-header, .main-nav {
+  display: flex;
+  flex-direction: column; }
+
+body, .contactinfo p, .main-nav a {
+  text-align: center; }
+
+.portfolio::after, .projects::after, .profile::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*
+    Create at least one mixin for a common text pattern.
+
+    As a minimum, include the following arguments in your mixin:
+        font-size
+        font-weight
+        color
+    Add your mixin as a declaration using @include in at least three rules where any of the text properties listed above are present.
+*/
 /**************************
 BASE STYLES
 **************************/
@@ -5,31 +40,86 @@ BASE STYLES
   box-sizing: border-box; }
 
 body {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Khula";
+  font-size: 1.1em;
+  font-weight: 200;
   color: #878787;
-  text-align: center;
   background-color: #fafafa; }
 
 ul {
   padding-left: 0; }
 
 p {
-  margin: 0 14px 20px;
+  font-family: "Khula";
   font-size: 1.1em;
-  font-weight: 200; }
+  font-weight: 200;
+  color: #878787; }
 
 li {
   list-style: none; }
 
-@media (min-width: 768px) {
-  .portfolio h2 {
-    background-color: white; } }
-@media (min-width: 1024px) {
-  .portfolio {
-    width: 95%;
-    margin: auto; }
-    .portfolio ul {
-      margin: auto; } }
+img {
+  max-width: 90%; }
+
+.profile img {
+  width: 75%;
+  margin-bottom: .7em; }
+  @media (min-width: 768px) {
+    .profile img {
+      float: right;
+      width: 40%;
+      padding-left: 1em; } }
+  @media (min-width: 1024px) {
+    .profile img {
+      width: 45%;
+      padding: 2em;
+      padding-top: 0; } }
+
+h1 {
+  font-family: "Khula";
+  font-size: 2em;
+  font-weight: 800;
+  color: #444;
+  text-transform: uppercase;
+  margin: 12px 0; }
+
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Khula";
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
+  padding-top: 25px; }
+
+h3 {
+  font-family: "Khula";
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: .5em; }
+
+h4 {
+  font-family: "Khula";
+  font-size: 1.1em;
+  font-weight: 200;
+  color: #878787;
+  float: left;
+  margin-top: -0.1em; }
+
+.portfolio {
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 1024px) {
+    .portfolio {
+      width: 95%; }
+      .portfolio ul {
+        margin-left: auto;
+        margin-right: auto; } }
 
 @media (min-width: 768px) {
   .projects {
@@ -43,8 +133,9 @@ li {
       padding-left: 0; } }
 @media (min-width: 1024px) {
   .projects li {
-    width: 33.3333%;
-    margin: auto; } }
+    margin-left: auto;
+    margin-right: auto;
+    width: 33.3333%; } }
 
 .caption {
   margin-bottom: 50px; }
@@ -54,14 +145,14 @@ li {
       margin: 0 auto 3em; } }
 
 .contactinfo {
-  background-color: orange;
-  color: white; }
+  background-color: #ed9a1e;
+  color: #fffdf9; }
   .contactinfo h2 {
-    color: white; }
+    color: #fffdf9; }
   @media (min-width: 768px) {
     .contactinfo p {
+      color: #fffdf9;
       font-size: 1.4em;
-      text-align: center;
       padding-left: 12.5%;
       padding-right: 12.5%; } }
   @media (min-width: 1024px) {
@@ -82,8 +173,9 @@ li {
 
 @media (min-width: 768px) {
   .profile {
-    width: 95%;
-    margin: 0 auto; }
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%; }
     .profile p {
       text-align: left;
       font-size: 1.2em;
@@ -98,15 +190,13 @@ li {
     flex-direction: column;
     margin-right: auto; } }
 
-.portfolio::after, .profile::after {
-  content: "";
-  display: table;
-  clear: both; }
-
 footer {
+  margin-left: auto;
+  margin-right: auto;
   width: 80%;
   border-top: 1px solid #ddd;
-  margin: 2px auto 2em;
+  margin-top: 2px;
+  margin-bottom: 2em;
   font-weight: bold;
   color: #444;
   padding-bottom: 1.5em;
@@ -131,10 +221,6 @@ footer {
 @media (min-width: 768px) {
   .foot-nav {
     justify-content: space-between; } }
-
-.main-header, .main-nav {
-  display: flex;
-  flex-direction: column; }
 
 .main-header {
   padding-top: 2em; }
@@ -167,15 +253,14 @@ footer {
       align-self: center;
       margin-right: 1.4em; } }
   .main-nav a {
-    display: block;
-    color: #444;
-    background-color: white;
+    font-family: "Khula";
     font-size: 1.125em;
     font-weight: 700;
-    text-align: center;
-    padding: .7em;
+    color: #444;
     text-transform: uppercase;
     text-decoration: none;
+    display: block;
+    padding: .7em;
     margin: .3em .7em; }
     @media (min-width: 768px) {
       .main-nav a {
@@ -183,61 +268,12 @@ footer {
         background-color: #fafafa;
         margin: 1em;
         padding-bottom: 1em; } }
-  .main-nav a:hover {
-    color: orange;
-    border-bottom: 1px dotted orange; }
+    .main-nav a:hover {
+      color: #ed9a1e;
+      border-bottom: 1px dotted #ffa500; }
   @media (min-width: 1024px) {
     .main-nav li {
       margin-left: -1em;
       margin-right: -1em; } }
-
-.portfolio, .projects {
-  background-color: white; }
-
-.projects, .skills, .contactinfo {
-  padding-bottom: 1em; }
-
-img {
-  max-width: 90%; }
-
-.profile img {
-  width: 75%;
-  margin-bottom: .7em; }
-  @media (min-width: 768px) {
-    .profile img {
-      float: right;
-      width: 40%;
-      padding-left: 1em; } }
-  @media (min-width: 1024px) {
-    .profile img {
-      width: 45%;
-      padding: 2em;
-      padding-top: 0; } }
-
-@font-face {
-  font-family: 'Audiowide', cursive;
-  font-family: 'Catamaran', sans-serif; }
-h1 {
-  font-family: 'Audiowide', sans-serif;
-  color: #444;
-  margin: 12px 0; }
-
-h2 {
-  font-family: 'Catamaran', sans-serif;
-  text-transform: uppercase;
-  padding: 30px;
-  margin: 0 auto;
-  font-size: 1em;
-  color: #444; }
-
-h3 {
-  font-size: 1.3em;
-  font-weight: 400;
-  color: #444;
-  margin-bottom: .5em; }
-
-h4 {
-  float: left;
-  margin-top: -0.1em; }
 
 /*# sourceMappingURL=application.css.map */

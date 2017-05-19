@@ -1,0 +1,30 @@
+/*
+    Create at least one mixin for a common text pattern.
+
+    As a minimum, include the following arguments in your mixin:
+        font-size
+        font-weight
+        color
+    Add your mixin as a declaration using @include in at least three rules where any of the text properties listed above are present.
+*/
+
+@mixin side-padding($pad) {
+    padding-left: $pad;
+    padding-right: $pad;
+}
+
+@mixin default_text($myfont: 'Khula', $size: 1.1em, $weight: 200, $color: $text-color, $transform: null, $decor: null) {
+    font-family: $myfont;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-transform: $transform;
+    text-decoration: $decor;
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}

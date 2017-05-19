@@ -1,18 +1,15 @@
-@import 'utilities/variables';
-
 /**************************
 BASE STYLES
 **************************/
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Catamaran', sans-serif;
-  color: $text-color;
-  text-align: center;
-  background-color: $background-color;
+    @extend %centertext;
+    @include default_text;
+    background-color: $background-color;
 }
 
 ul {
@@ -20,11 +17,9 @@ ul {
 }
 
 p {
-  margin: 0 14px 20px;
-  font-size: 1.1em;
-  font-weight: 200;
+    @include default_text;
 }
 
 li {
-   list-style: none;
+    list-style: none;
 }

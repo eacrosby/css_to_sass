@@ -1,9 +1,11 @@
 footer {
+    @include push--auto;
 	width: 80%;
 	border-top: 1px solid #ddd;
-	margin: 2px auto 2em;
+	margin-top: 2px;
+    margin-bottom: 2em;
 	font-weight: bold;
-	color: #444;
+	color: $dark-text-color;
 	padding-bottom: 1.5em;
 	padding-top: 0.5em;
     ul {
@@ -20,16 +22,16 @@ footer {
     li a {
         text-transform: uppercase;
         text-decoration: none;
-        color: #444;
+        color: $dark-text-color;
         float: right;
     }
 }
 
 .foot-nav {
-    @media (max-width: 767px) {
+    @media (max-width: #{$break-tablet - 1px}) {
         display: none;
     }
-    @media (min-width: 768px) {
+    @media (min-width: $break-tablet) {
 		justify-content: space-between;
     }
 }

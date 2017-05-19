@@ -1,31 +1,24 @@
-@font-face {
-    font-family: 'Audiowide', cursive;
-    font-family: 'Catamaran', sans-serif;
-}
-
 h1 {
-	font-family: 'Audiowide', sans-serif;
-	color: #444;
+	@include default-text($size: 2em, $weight: 800, $color: $dark-text-color, $transform: uppercase);
+//	color: $dark-text-color;
 	margin: 12px 0;
 }
 
 h2 {
-	font-family: 'Catamaran', sans-serif;
+    @include push--auto;
+    @include default-text($size: 1.5em, $weight: 700, $color: $dark-text-color, $transform: uppercase);
+    @include side-padding(30px);
 	text-transform: uppercase;
-	padding: 30px;
-	margin: 0 auto;
-	font-size: 1em;
-	color: #444;
+    padding-top: 25px;
 }
 
 h3 {
-	font-size: 1.3em;
-	font-weight: 400;
-	color: #444;
+    @include default-text($size: 1.3em, $weight: 600, $color: $dark-text-color);
 	margin-bottom: .5em;
 }
 
 h4 {
-	float: left;
+	@include default-text;
+    float: left;
 	margin-top: -0.1em;
 }
